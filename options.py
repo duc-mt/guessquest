@@ -4,11 +4,9 @@
 # =============================================================================
 #
 #        FILE:  options.py
-#      AUTHOR:  Tan Duc Mai <henryfromvietnam@gmail.com>
+#      AUTHOR:  Mai Tan Duc <ducmai.network@gmail.com>
 #     CREATED:  2021-07-15
 # DESCRIPTION:  Determines game modes and the 'try_again' option.
-#   I hereby declare that I completed this work without any improper help
-#   from a third party and without using any aids other than those cited.
 #
 # =============================================================================
 

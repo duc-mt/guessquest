@@ -79,7 +79,7 @@ therefore, should be addressed with a while loop instead of a for loop.
 
 ```
 Hello, Welcome to the Number Guessing Game!
-I'm Henry! What's Your Name? Jack
+I'm Duc! What's Your Name? Jack
 Okay, Jack. Let's Begin The Guessing Game!
 Choose a level:
 1. Easy
