@@ -21,12 +21,12 @@ from time import sleep
 
 
 # ---------------------------- Function Definition ----------------------------
-def start_game():
-    print('Hello, Welcome to the Number Guessing Game!')
+def start_game() -> None:
+    print('Hello, Welcome to Guessquest!')
     name = input('I\'m Henry! What\'s Your Name? ')
     sleep(1)
 
-    print(f'Okay, {name}. Let\'s Begin The Guessing Game!')
+    print(f'Okay, {name}. Let\'s Begin Guessquest!')
     print('Choose a level:',
           '1. Easy',
           '2. Medium',
@@ -34,7 +34,10 @@ def start_game():
           sep='\n',
           )
     sleep(1)
-    level = int(input('Pick a number: '))
+    try:
+        level = int(input('Pick a number: '))
+    except ValueError:
+        level = 0
     print()
     sleep(1)
 

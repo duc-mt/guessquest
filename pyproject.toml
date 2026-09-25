@@ -1,0 +1,45 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "guessquest"
+version = "0.1.0"
+description = "A modular command-line number guessing game"
+readme = "README.md"
+requires-python = ">=3.9"
+authors = [
+    { name = "Mai Tan Duc", email = "ducmai.network@gmail.com" }
+]
+license = { text = "MIT" }
+dependencies = []
+
+[tool.setuptools]
+py-modules = ["main", "welcome", "operations", "options"]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+    "pytest-cov>=4.0",
+    "ruff>=0.3.0",
+    "mypy>=1.8.0",
+    "pre-commit"
+]
+
+[tool.ruff]
+line-length = 88
+target-version = "py39"
+
+[tool.ruff.lint]
+select = ["E", "F", "B", "I", "UP", "N"]
+ignore = []
+
+[tool.mypy]
+python_version = "3.9"
+strict = true
+ignore_missing_imports = true
+warn_unused_ignores = true
+
+[tool.pytest.ini_options]
+addopts = "--cov=. --cov-report=term-missing"
+testpaths = ["tests"]
