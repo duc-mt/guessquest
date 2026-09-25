@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-# -*- coding: utf-8 -*-
 
 # =============================================================================
 #
@@ -21,7 +20,7 @@ def guessing(guess_range: int, guess_limit: int) -> None:
     attempts_allowed = guess_limit
     rnd = random.randint(1, guess_range)
     try:
-        guess = int(input('What is your guess? '))
+        guess = int(input("What is your guess? "))
     except ValueError:
         guess = 0
     done = False
@@ -31,40 +30,48 @@ def guessing(guess_range: int, guess_limit: int) -> None:
 
     # Now we have a valid guess.
     while guess_limit > 0 and not done:
-        guess_limit -= 1                     # Take one guess = lose one chance
+        guess_limit -= 1  # Take one guess = lose one chance
         if guess_limit > 0:
             if guess < rnd:
-                print(f'It should be higher than {guess}.')
+                print(f"It should be higher than {guess}.")
             elif guess > rnd:
-                print(f'It should be lower than {guess}.')
+                print(f"It should be lower than {guess}.")
             else:
                 attempts_taken = attempts_allowed - guess_limit
-                print('You nailed it! And it only took you',
-                      attempts_taken, 'attempts.')
+                print(
+                    "You nailed it! And it only took you", attempts_taken, "attempts."
+                )
                 done = True
             if guess_limit > 0 and not done:
-                print(f'You still have {guess_limit} chances left.\n')
+                print(f"You still have {guess_limit} chances left.\n")
                 try:
-                    guess = int(input('Try a new guess: '))
+                    guess = int(input("Try a new guess: "))
                 except ValueError:
                     guess = 0
                 # Another input validation loop.
                 guess = validate_input(guess, guess_range)
-        elif guess_limit == 0 and not done:   # Last chance to guess
+        elif guess_limit == 0 and not done:  # Last chance to guess
             if guess == rnd:
-                print('You nailed it! However, it took you all the',
-                      attempts_allowed, 'attempts.')
+                print(
+                    "You nailed it! However, it took you all the",
+                    attempts_allowed,
+                    "attempts.",
+                )
             else:
-                print('GAME OVER! It took you more than',
-                      attempts_allowed, 'attempts.',
-                      'The correct number is', str(rnd) + '.')
+                print(
+                    "GAME OVER! It took you more than",
+                    attempts_allowed,
+                    "attempts.",
+                    "The correct number is",
+                    str(rnd) + ".",
+                )
 
 
 def validate_input(guess: int, guess_range: int) -> int:
     while not 1 <= guess <= guess_range:
-        print('ERROR! Your guess is out of range!\n')
+        print("ERROR! Your guess is out of range!\n")
         try:
-            guess = int(input('Try Again. What is your guess? '))
+            guess = int(input("Try Again. What is your guess? "))
         except ValueError:
             guess = 0
     return guess

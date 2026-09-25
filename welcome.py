@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-# -*- coding: utf-8 -*-
 
 # =============================================================================
 #
@@ -16,26 +15,29 @@ The game_options module contains 3 user choices: easy, medium, and hard mode.
 It also asks whether the user want to play the game again.
 The time.sleep() function gives break between each set of message.
 """
-import options as option
+
 from time import sleep
+
+import options as option
 
 
 # ---------------------------- Function Definition ----------------------------
 def start_game() -> None:
-    print('Hello, Welcome to Guessquest!')
-    name = input('I\'m Henry! What\'s Your Name? ')
+    print("Hello, Welcome to Guessquest!")
+    name = input("I'm Henry! What's Your Name? ")
     sleep(1)
 
-    print(f'Okay, {name}. Let\'s Begin Guessquest!')
-    print('Choose a level:',
-          '1. Easy',
-          '2. Medium',
-          '3. Hard',
-          sep='\n',
-          )
+    print(f"Okay, {name}. Let's Begin Guessquest!")
+    print(
+        "Choose a level:",
+        "1. Easy",
+        "2. Medium",
+        "3. Hard",
+        sep="\n",
+    )
     sleep(1)
     try:
-        level = int(input('Pick a number: '))
+        level = int(input("Pick a number: "))
     except ValueError:
         level = 0
     print()
@@ -51,5 +53,5 @@ def start_game() -> None:
         option.hard()
         option.try_again()
     else:
-        print('ERROR! Invalid value! Please try again.\n')
+        print("ERROR! Invalid value! Please try again.\n")
         start_game()
