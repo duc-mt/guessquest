@@ -16,11 +16,14 @@ import random
 
 
 # ---------------------------- Function Definitions ---------------------------
-def guessing(guess_range, guess_limit):
+def guessing(guess_range: int, guess_limit: int) -> None:
     # Set the initial values.
     attempts_allowed = guess_limit
     rnd = random.randint(1, guess_range)
-    guess = int(input('What is your guess? '))
+    try:
+        guess = int(input('What is your guess? '))
+    except ValueError:
+        guess = 0
     done = False
 
     # Validate the inputted guess.
@@ -41,7 +44,10 @@ def guessing(guess_range, guess_limit):
                 done = True
             if guess_limit > 0 and not done:
                 print(f'You still have {guess_limit} chances left.\n')
-                guess = int(input('Try a new guess: '))
+                try:
+                    guess = int(input('Try a new guess: '))
+                except ValueError:
+                    guess = 0
                 # Another input validation loop.
                 guess = validate_input(guess, guess_range)
         elif guess_limit == 0 and not done:   # Last chance to guess
@@ -54,8 +60,11 @@ def guessing(guess_range, guess_limit):
                       'The correct number is', str(rnd) + '.')
 
 
-def validate_input(guess, guess_range):
+def validate_input(guess: int, guess_range: int) -> int:
     while not 1 <= guess <= guess_range:
         print('ERROR! Your guess is out of range!\n')
-        guess = int(input('Try Again. What is your guess? '))
+        try:
+            guess = int(input('Try Again. What is your guess? '))
+        except ValueError:
+            guess = 0
     return guess

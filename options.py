@@ -22,25 +22,25 @@ import welcome
 
 
 # ---------------------------- Function Definitions ---------------------------
-def easy():
+def easy() -> None:
     print('You are to guess a number between 1 and 10 '
           'in no more than 6 attempts.')
     game(10, 6)
 
 
-def medium():
+def medium() -> None:
     print('You are to guess a number between 1 and 20 '
           'in no more than 4 attempts.')
     game(20, 4)
 
 
-def hard():
+def hard() -> None:
     print('You are to guess a number between 1 and 50 '
           'in no more than 3 attempts.')
     game(50, 3)
 
 
-def try_again():
+def try_again() -> None:
     print()
     again = input('Do you want to play again? [Y/n] ')
     print()

@@ -1,5 +1,11 @@
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+# Guessquest
+
+![CI](https://github.com/duc-mt/guessquest/actions/workflows/ci.yml/badge.svg)
+![Python Version](https://img.shields.io/badge/python-3.9%2B-blue)
+![License](https://img.shields.io/badge/license-MIT-green)
+
 # Table of Contents
 
 - [Aim](#aim)
@@ -11,7 +17,7 @@
 
 # Aim
 
-Design and implement a modular command-line number guessing game with three 
+Design and implement Guessquest, a modular command-line number guessing game with three 
 difficulty tiers (Easy, Medium, Hard). The project emphasises clean code 
 organisation by dividing functionality into reusable Python modules, 
 demonstrating best practices in logic control, user input validation, and 
@@ -78,9 +84,9 @@ therefore, should be addressed with a while loop instead of a for loop.
 # Sample Output
 
 ```
-Hello, Welcome to the Number Guessing Game!
+Hello, Welcome to Guessquest!
 I'm Duc! What's Your Name? Jack
-Okay, Jack. Let's Begin The Guessing Game!
+Okay, Jack. Let's Begin Guessquest!
 Choose a level:
 1. Easy
 2. Medium
