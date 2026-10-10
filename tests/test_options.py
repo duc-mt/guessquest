@@ -11,6 +11,7 @@ Usage:         python3 test_options.py [options]
 Notes:         Requires Python 3.8+
 ==============================================================================
 """
+
 from unittest.mock import patch
 
 import options

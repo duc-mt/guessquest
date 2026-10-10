@@ -11,6 +11,7 @@ Usage:         python3 test_operations.py [options]
 Notes:         Requires Python 3.8+
 ==============================================================================
 """
+
 from unittest.mock import patch
 
 from operations import guessing, validate_input
