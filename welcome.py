@@ -1,21 +1,18 @@
+"""
+==============================================================================
+Module Name:   welcome.py
+Description:   Source module welcome.py.
+Author:        Mai Tan Duc <ducmai.network@gmail.com>
+Created:       2026-10-10
+Version:       1.0.0
+License:       MIT
+==============================================================================
+Usage:         python3 welcome.py [options]
+Notes:         Requires Python 3.8+
+==============================================================================
+"""
+
 #!/usr/bin/python3
-
-# =============================================================================
-#
-#        FILE:  welcome.py
-#      AUTHOR:  Mai Tan Duc <ducmai.network@gmail.com>
-#     CREATED:  2021-07-15
-# DESCRIPTION:  Introduces the user to the game, asking them to choose level.
-#
-# =============================================================================
-
-# ------------------------------- Module Imports ------------------------------
-"""
-The game_options module contains 3 user choices: easy, medium, and hard mode.
-It also asks whether the user want to play the game again.
-The time.sleep() function gives break between each set of message.
-"""
-
 from time import sleep
 
 import options as option

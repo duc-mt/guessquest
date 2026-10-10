@@ -1,20 +1,18 @@
+"""
+==============================================================================
+Module Name:   main.py
+Description:   Source module main.py.
+Author:        Mai Tan Duc <ducmai.network@gmail.com>
+Created:       2026-10-10
+Version:       1.0.0
+License:       MIT
+==============================================================================
+Usage:         python3 main.py [options]
+Notes:         Requires Python 3.8+
+==============================================================================
+"""
+
 #!/usr/bin/python3
-
-# =============================================================================
-#
-#        FILE:  main.py
-#      AUTHOR:  Mai Tan Duc <ducmai.network@gmail.com>
-#     CREATED:  2021-07-15
-# DESCRIPTION:  Combines all of the function and runs at once.
-#
-# =============================================================================
-
-# ------------------------------- Module Import -------------------------------
-"""
-This module, although only 1, step-by-step includes all of the
-pre-defined modules in the other files.
-"""
-
 from welcome import start_game
 
 # ------------------------------- Main Function -------------------------------

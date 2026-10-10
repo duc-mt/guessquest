@@ -1,7 +1,7 @@
 """
 ==============================================================================
 Module Name:   test_options.py
-Description:   Implementation and logic for test_options.
+Description:   Source module test_options.py.
 Author:        Mai Tan Duc <ducmai.network@gmail.com>
 Created:       2026-10-10
 Version:       1.0.0

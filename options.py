@@ -1,22 +1,18 @@
+"""
+==============================================================================
+Module Name:   options.py
+Description:   Source module options.py.
+Author:        Mai Tan Duc <ducmai.network@gmail.com>
+Created:       2026-10-10
+Version:       1.0.0
+License:       MIT
+==============================================================================
+Usage:         python3 options.py [options]
+Notes:         Requires Python 3.8+
+==============================================================================
+"""
+
 #!/usr/bin/python3
-
-# =============================================================================
-#
-#        FILE:  options.py
-#      AUTHOR:  Mai Tan Duc <ducmai.network@gmail.com>
-#     CREATED:  2021-07-15
-# DESCRIPTION:  Determines game modes and the 'try_again' option.
-#
-# =============================================================================
-
-# ------------------------------- Module Imports ------------------------------
-"""
-The first module contains the main part of the game, which is processing
-the guess and validate user input.
-The second module is the introduction to the game, where the user is asked
-to choose a mode to play.
-"""
-
 import welcome
 from operations import guessing as game
 
