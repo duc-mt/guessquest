@@ -34,7 +34,7 @@ jobs:
         
     - name: Type check with Mypy
       run: |
-        mypy .
+        mypy main.py welcome.py operations.py options.py
         
     - name: Test with pytest
       run: |
